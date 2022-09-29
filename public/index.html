@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <meta
+      name="description"
+      content="Random Colors" />
+
+    <!-- IOS 사파리 -->
+    <!-- 주소창 등의 웹 브라우저 UI를 표시하지 않기 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 상태 바의 스타일을 지정 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- 홈 화면에서 표시되는 앱 이름을 지정 -->
+    <meta name="apple-mobile-web-app-title" content="Timer">
+    <!-- 홈 화면에서 표시되는 앱 아이콘을 지정 -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- 웹 앱 매니페스트를 읽어 들이기 -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- 서비스 워커를 등록 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+                .then((reg) => {
+                  console.log('서비스 워커가 등록됨.', reg);
+                });
+      }
+    </script>
+    <title>Random Colors</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
