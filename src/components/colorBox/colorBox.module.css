@@ -2,3 +2,9 @@
 	display: flex;
 	height: 100%;
 }
+
+@media (orientation: portrait) { /* 세로: portrait, 가로: landscape */
+	.colorBox {
+		flex-direction: column;
+	}
+}
